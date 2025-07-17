@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us – ping³</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <h2>ping³</h2>
+      <small>Innovating with AI, One Ping at a Time</small>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link active">About</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="about-hero">
+    <h1>About ping³</h1>
+    <p>Our mission is to transform ideas into intelligent solutions using AI, web, and design synergy.</p>
+  </section>
+
+  <section class="about-team">
+    <h2>Meet the Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="images/kayy.jpg" alt="Iyeba Alpha Kallon" />
+        <h3>Iyeba Alpha Kallon</h3>
+        <p><strong>Role:</strong> Frontend Developer</p>
+        <p>Expert in responsive UI, CSS animation, and intuitive experiences.</p>
+      </div>
+      <div class="team-member">
+        <img src="images/swaray.jpg" alt="Alusine Swaray" />
+        <h3>Alusine Swaray</h3>
+        <p><strong>Role:</strong> UI/UX Designer</p>
+        <p>Creates wireframes, prototypes, and visuals that users actually vibe with.</p>
+      </div>
+      <div class="team-member">
+        <img src="images/walon.jpg" alt="Mohamed Lamin Walon-Jalloh" />
+        <h3>Mohamed Lamin Walon-Jalloh</h3>
+        <p><strong>Role:</strong> Full Stack Developer</p>
+        <p>Connects front-end to APIs, writes JavaScript logic, and structures content cleanly.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-skills">
+    <h2>Core Skills & Tools</h2>
+    <table>
+      <tr>
+        <th>Member</th><th>Skills</th><th>Tools</th>
+      </tr>
+      <tr>
+        <td>Iyeba</td><td>HTML, CSS, JS, React</td><td>VSCode, Git, Chrome DevTools</td>
+      </tr>
+      <tr>
+        <td>Alusine</td><td>Figma, UX Research, Branding</td><td>Figma, Photoshop, Illustrator</td>
+      </tr>
+      <tr>
+        <td>Walon</td><td>Node.js, API Integration, Content Strategy</td><td>Node.js, VSCode, Notion</td>
+      </tr>
+    </table>
+  </section>
+</main>
+
+<footer>
+  <div class="social-links">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+  </div>
+  <p>&copy; 2025 ping³ Team. All rights reserved.</p>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  hamburger.addEventListener('click', ()=> {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+  document.querySelectorAll('.nav-link').forEach(link=> {
+    link.addEventListener('click', ()=> {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+</script>
+
+</body>
+</html>

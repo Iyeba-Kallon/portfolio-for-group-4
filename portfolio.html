@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio – ping³</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <h2>ping³</h2>
+      <small>Innovating with AI, One Ping at a Time</small>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="portfolio.html" class="nav-link active">Portfolio</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="portfolio-header">
+    <h1>Our Projects</h1>
+    <p>A curated showcase of AI-powered solutions built by ping³.</p>
+  </section>
+
+  <!--  Projects Grid -->
+  <section class="projects">
+    <div class="project-card">
+      <img src="images/p1.jpg" alt="Smart Chatbot" />
+      <h3>Smart Chatbot</h3>
+      <p>AI chatbot that responds naturally using NLP.</p>
+      <a href="#" class="project-link">View Project</a>
+    </div>
+    <div class="project-card">
+      <img src="images/p2.jpg" alt="Image Classifier" />
+      <h3>Image Classifier</h3>
+      <p>ML model that classifies images accurately.</p>
+      <a href="#" class="project-link">View Project</a>
+    </div>
+    <div class="project-card">
+      <img src="images/p3.jpg" alt="Predictive Analytics" />
+      <h3>Predictive Analytics</h3>
+      <p>Data-driven tool for forecasting and planning.</p>
+      <a href="#" class="project-link">View Project</a>
+    </div>
+    <div class="project-card">
+      <img src="images/p4.jpg" alt="Maternal Health App" />
+      <h3>Maternal Health App</h3>
+      <p>A smart assistant for maternal care powered by AI.</p>
+      <a href="#" class="project-link">View Project</a>
+    </div>
+    <div class="project-card">
+      <img src="images/p5.jpg" alt="Voice Assistant" />
+      <h3>Voice Assistant</h3>
+      <p>Built a local-language voice bot for quick search & commands.</p>
+      <a href="#" class="project-link">View Project</a>
+    </div>
+    <div class="project-card">
+      <img src="images/p6.jpg" alt="Energy Monitoring System" />
+      <h3>Energy Monitoring System</h3>
+      <p>Track and visualize electrical usage in real time.</p>
+      <a href="#" class="project-link">View Project</a>
+    </div>
+  </section>
+</main>
+
+  <!-- 🔢 Project Statistics -->
+  <section class="project-stats">
+    <div class="stat">
+      <h3>10+</h3>
+      <p>Projects Completed</p>
+    </div>
+    <div class="stat">
+      <h3>15k+</h3>
+      <p>Lines of Code</p>
+    </div>
+    <div class="stat">
+      <h3>500+</h3>
+      <p>Dev Hours Logged</p>
+    </div>
+    <div class="stat">
+      <h3>3</h3>
+      <p>AI Enthusiasts</p>
+    </div>
+  </section>
+
+<footer>
+  <div class="social-links">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+  </div>
+  <p>&copy; 2025 ping³ Team. All rights reserved.</p>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+</script>
+
+</body>
+</html>

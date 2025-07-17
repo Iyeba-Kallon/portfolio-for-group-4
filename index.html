@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ping³ – Innovating with AI</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <h2>ping³</h2>
+      <small>Innovating with AI, One Ping at a Time</small>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Building the Future with AI</h1>
+    <p>We design intelligent solutions that automate, predict, and enhance human experiences.</p>
+    <div class="hero-buttons">
+      <a href="about.html" class="btn btn-primary">Meet Our Team</a>
+      <a href="portfolio.html" class="btn btn-secondary">View Projects</a>
+    </div>
+  </section>
+
+  <section class="team-intro">
+    <h2>Our Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="images/kayy.jpg" alt="Iyeba Alpha Kallon" />
+        <h3>Iyeba Alpha Kallon</h3>
+        <p>Frontend Developer</p>
+      </div>
+      <div class="team-member">
+        <img src="images/swaray.jpg" alt="Alusine Swaray" />
+        <h3>Alusine Swaray</h3>
+        <p>UI/UX Designer</p>
+      </div>
+      <div class="team-member">
+        <img src="images/walon.jpg" alt="Mohamed Lamin Walon-Jalloh" />
+        <h3>Mohamed Lamin Walon-Jalloh</h3>
+        <p>Full Stack Developer</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>What We Offer</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <i class="fas fa-brain"></i>
+        <h3>AI Solutions</h3>
+        <p>Custom machine learning and deep learning models tailored to real-world challenges.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-chart-line"></i>
+        <h3>Predictive Analytics</h3>
+        <p>Turn your data into powerful predictions to guide smart decisions.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-robot"></i>
+        <h3>Automation</h3>
+        <p>We automate repetitive tasks with bots, scripts, and smart workflows.</p>
+      </div>
+      <div class="feature-card">
+        <i class="fas fa-cloud"></i>
+        <h3>Cloud Deployment</h3>
+        <p>Deploy scalable AI models via web apps, APIs, or cloud services.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="social-links">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+  </div>
+  <p>&copy; 2025 ping³ Team. All rights reserved.</p>
+</footer>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+</script>
+
+</body>
+</html>

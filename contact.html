@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact – ping³</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <h2>ping³</h2>
+      <small>Innovating with AI, One Ping at a Time</small>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="contact-header">
+    <h1>Get In Touch</h1>
+    <p>We’d love to hear from you! Reach out to ping³ via the form or through our contacts below.</p>
+  </section>
+
+  <section class="contact-content">
+    <div class="contact-info">
+      <h2>Team Contacts</h2>
+      <ul>
+        <li><strong>Iyeba Alpha Kallon</strong><br />Email: <a href="mailto:iyeba@example.com">iyeba@example.com</a><br />Phone: +232 123 4567</li>
+        <li><strong>Alusine Swaray</strong><br />Email: <a href="mailto:alusine@example.com">alusine@example.com</a><br />Phone: +232 234 5678</li>
+        <li><strong>Mohamed Lamin Walon-Jalloh</strong><br />Email: <a href="mailto:lamin@example.com">lamin@example.com</a><br />Phone: +232 345 6789</li>
+      </ul>
+    </div>
+
+    <div class="contact-form">
+      <h2>Send Us a Message</h2>
+      <form id="contactForm" action="#" method="POST" onsubmit="return validateForm()">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+
+        <button type="submit" class="btn btn-primary">Send Message</button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="social-links">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+  </div>
+  <p>&copy; 2025 ping³ Team. All rights reserved.</p>
+</footer>
+
+<script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+
+  // Simple form validation
+  function validateForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+      alert('Please fill out all fields.');
+      return false;
+    }
+    // basic email regex check
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert('Please enter a valid email address.');
+      return false;
+    }
+    alert('Message sent! (Demo only, no backend)');
+    return false; // prevent actual submission for demo
+  }
+</script>
+
+</body>
+</html>

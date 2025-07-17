@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog – ping³</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <h2>ping³</h2>
+      <small>Innovating with AI, One Ping at a Time</small>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <div class="nav-menu" id="nav-menu">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="portfolio.html" class="nav-link">Portfolio</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="blog.html" class="nav-link active">Blog</a>
+    </div>
+  </nav>
+</header>
+
+<main class="container">
+  <header class="page-header">
+    <h1>Latest Insights from ping³</h1>
+    <p>Dive deep into AI trends, coding tips, and tech stories.</p>
+  </header>
+
+  <div class="blog-wrapper">
+    <!-- Posts Section -->
+    <section class="blog-posts">
+
+      <article class="post">
+        <img src="images/p5.jpg" alt="AI Future Trends" />
+        <div class="post-text">
+          <div class="post-meta">
+            <time datetime="2025-07-10">July 10, 2025</time>
+            <span class="category">AI</span>
+            <span>ping³ Team</span>
+          </div>
+          <h2>5 AI Trends Shaping Our Future</h2>
+          <p>Explore the top 5 AI innovations transforming industries and daily life in 2025 and beyond.</p>
+          <a href="#" class="btn-primary">Read More</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <img src="images/p3.jpg" alt="Coding Tips" />
+        <div class="post-text">
+          <div class="post-meta">
+            <time datetime="2025-06-25">June 25, 2025</time>
+            <span class="category">Coding</span>
+            <span>Iyeba Alpha Kallon</span>
+          </div>
+          <h2>Mastering Responsive Design in 2025</h2>
+          <p>Tips and tricks to create fluid, user-friendly layouts that work on every device.</p>
+          <a href="#" class="btn-primary">Read More</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <img src="images/p2.jpg" alt="AI Ethics" />
+        <div class="post-text">
+          <div class="post-meta">
+            <time datetime="2025-06-15">June 15, 2025</time>
+            <span class="category">Ethics</span>
+            <span>Alusine Swaray</span>
+          </div>
+          <h2>Why AI Ethics Matter More Than Ever</h2>
+          <p>Discussing fairness, transparency, and responsibility in AI development.</p>
+          <a href="#" class="btn-primary">Read More</a>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- Sidebar Section -->
+    <aside class="blog-sidebar">
+      <section class="sidebar-widget">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#" class="active">All</a></li>
+          <li><a href="#">AI</a></li>
+          <li><a href="#">Coding</a></li>
+          <li><a href="#">Ethics</a></li>
+          <li><a href="#">Design</a></li>
+        </ul>
+      </section>
+
+      <section class="sidebar-widget">
+        <h3>Recent Posts</h3>
+        <div class="recent-post">
+          <img src="images/p3.jpg" alt="AI Future Trends" />
+          <div>
+            <a href="#">5 AI Trends Shaping Our Future</a>
+            <small>July 10, 2025</small>
+          </div>
+        </div>
+        <div class="recent-post">
+          <img src="images/p5.jpg" alt="Coding Tips" />
+          <div>
+            <a href="#">Mastering Responsive Design in 2025</a>
+            <small>June 25, 2025</small>
+          </div>
+        </div>
+        <div class="recent-post">
+          <img src="images/p2.jpg" alt="AI Ethics" />
+          <div>
+            <a href="#">Why AI Ethics Matter More Than Ever</a>
+            <small>June 15, 2025</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="sidebar-widget newsletter-form">
+        <h3>Subscribe</h3>
+        <form id="subscribeForm">
+          <input type="email" placeholder="Your email address" required />
+          <button type="submit">Subscribe</button>
+          <p class="subscription-message" id="subscriptionMessage"></p>
+        </form>
+      </section>
+    </aside>
+  </div>
+</main>
+
+<footer>
+  <div class="social-links">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#"><i class="fab fa-github"></i></a>
+  </div>
+  <p>&copy; 2025 ping³ Team. All rights reserved.</p>
+</footer>
+
+<script>
+  // Hamburger menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const navMenu = document.getElementById('nav-menu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+  });
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navMenu.classList.remove('active');
+    });
+  });
+
+  // Simple subscribe form feedback
+  const form = document.getElementById('subscribeForm');
+  const msg = document.getElementById('subscriptionMessage');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const email = form.querySelector('input[type="email"]').value;
+    if (email && email.includes('@')) {
+      msg.textContent = "Thanks for subscribing!";
+      msg.className = "subscription-message success";
+      form.reset();
+    } else {
+      msg.textContent = "Please enter a valid email.";
+      msg.className = "subscription-message error";
+    }
+  });
+</script>
+
+</body>
+</html>
