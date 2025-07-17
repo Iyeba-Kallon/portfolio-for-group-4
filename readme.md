@@ -7,8 +7,7 @@ Welcome to **ping³**, a beautifully designed multi-page portfolio website built
 **ping³** is a fictional AI tech startup showcasing its brand, team, projects, blog, and contact information. Designed with a sleek layout and soft color palette, it combines modern aesthetics with accessibility and performance.
 
 ### 🔥 Live Demo
-
-
+https://portfolio-for-group-4.vercel.app/index.html
 
 ---
 
