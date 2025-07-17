@@ -8,7 +8,7 @@ Welcome to **ping³**, a beautifully designed multi-page portfolio website built
 
 ### 🔥 Live Demo
 
-Check it out here: [https://v0-web-design-assignment-flame.vercel.app/](https://v0-web-design-assignment-flame.vercel.app/)
+
 
 ---
 
