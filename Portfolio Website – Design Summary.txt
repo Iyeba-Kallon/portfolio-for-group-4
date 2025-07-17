@@ -1,0 +1,41 @@
+
+
+Ping³ Portfolio Website – Design Summary
+
+Team Name: Ping³
+Project Year: 2025
+Project Type: Multi-page Personal Portfolio (Web Design Assignment)
+
+Layout Choices
+
+We followed a clean, responsive layout using standard HTML5 and CSS. The structure includes:
+
+* Navigation bar at the top for smooth page access.
+* Hero section with a powerful visual hook on the homepage.
+* Project showcase grid in the portfolio for clean display.
+* Modular sections for easy readability (e.g., About, Contact, Blog).
+* Footer includes social links and copyright.
+
+All pages share a consistent structure for uniformity.
+
+Color Palette
+
+We used a modern and professional color scheme:
+
+* Primary Color: Deep Midnight Blue (#020c1b) – for the background
+* Accent Colors: Neon Aqua (#00d1ff), Light Gray (#e0e0e0) – for highlights and text
+* Contrast: White and bright accents to ensure readability and accessibility
+
+The palette enhances the AI/digital theme and keeps the UI sleek.
+
+Features
+
+* Fully responsive layout using vanilla CSS (no frameworks)
+* Custom-designed sections: “What We Offer,” “Project Statistics,” and “Meet the Team”
+* Smooth scroll navigation between sections
+* Embedded video to give life to the homepage
+* Blog section styled like a news feed for updates
+* Contact form and links to socials for interactions.
+* GitHub and Vercel deployment-ready
+
+
